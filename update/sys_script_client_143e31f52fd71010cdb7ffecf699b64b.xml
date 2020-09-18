@@ -4,39 +4,35 @@
         <applies_extended>false</applies_extended>
         <condition/>
         <description/>
-        <field>short_description</field>
+        <field>u_what_needed</field>
         <global>true</global>
-        <isolate_script>false</isolate_script>
+        <isolate_script>true</isolate_script>
         <messages/>
-        <name>NeedIt onChange Example</name>
+        <name>NeedIt hide or show Other field</name>
         <order/>
         <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
-   if (isLoading || newValue === '') {
-      return;
-   }
-
-   //Type appropriate comment here, and begin script below
-   alert("You have changed the Short description from " + oldValue + " to " + newValue + ".");
-}
-
-
-
-]]></script>
+    if (newValue == '') {
+        return;
+    }
+	if(g_form.getValue('u_what_needed') == 'other'){
+		return;
+	}
+}]]></script>
         <sys_class_name>sys_script_client</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-02-08 16:54:04</sys_created_on>
+        <sys_created_by>sureshtelu</sys_created_by>
+        <sys_created_on>2020-09-17 16:15:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>0e18a3fd0f743200cd674f8ce1050e43</sys_id>
-        <sys_mod_count>9</sys_mod_count>
-        <sys_name>NeedIt onChange Example</sys_name>
+        <sys_id>143e31f52fd71010cdb7ffecf699b64b</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>NeedIt hide or show Other field</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_script_client_0e18a3fd0f743200cd674f8ce1050e43</sys_update_name>
+        <sys_update_name>sys_script_client_143e31f52fd71010cdb7ffecf699b64b</sys_update_name>
         <sys_updated_by>sureshtelu</sys_updated_by>
-        <sys_updated_on>2020-09-17 15:38:29</sys_updated_on>
+        <sys_updated_on>2020-09-18 07:40:53</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
